@@ -1,0 +1,37 @@
+@import "normalize";
+@import "global";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: @base03;
+}
+
+a {
+    color: @red;
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        background-color: @red;
+    }
+}
+
+footer {
+    position: fixed;
+    font-size: 0.8em;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 1em;
+}
+
+@import "home";

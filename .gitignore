@@ -1,0 +1,3 @@
+node_modules/*
+*.sublime*
+public/css/style.css

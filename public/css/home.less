@@ -1,0 +1,79 @@
+@block-width: 200px;
+@block-height: 7em;
+
+.home {
+
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+        font-weight: 300;
+    }
+
+    p {
+        line-height: 1.2em;
+        margin-bottom: 1em;
+    }
+
+    ul.main_selection_menu {
+        position: relative;
+        height: @block-height;
+        
+        li {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: @block-width;
+
+            a {
+                font-size: 1.5em;
+                font-weight: bold;
+                font-family: 'Myriad Pro';
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                display: block;
+                width: @block-width - 20px;
+                margin: 10px;
+                text-align: center;
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+
+        }
+
+        .projects {
+            left: @block-width * 0;
+            a {
+                .background_darken_on_hover(@green);
+            }
+        }
+
+        .writing {
+            left: @block-width * 1;
+            a {
+                .background_darken_on_hover(@orange);
+            }
+        }
+
+        .github {
+            left: @block-width * 2;
+            a {
+                .background_darken_on_hover(@blue);
+            }
+        }
+
+        .resume {
+            left: @block-width * 3;
+            a {
+                .background_darken_on_hover(@magenta);
+            }
+        }
+    }   
+}
