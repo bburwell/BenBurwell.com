@@ -95,9 +95,6 @@ exports.resume = function (req, res) {
 
 exports.project_index = function(req, res) {
     parseDirectory('projects', function (err, docs) {
-
-        console.log(docs);
-
         res.render('projects', {
             title: 'Ben Burwell‘s Projects',
             nav: true,
