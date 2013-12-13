@@ -1,0 +1,8 @@
+- nav = true;
+extends layout
+block content
+    each project in projects
+        .project.doc
+            .title
+                a(href=project.link)= project.title
+            .description= project.description

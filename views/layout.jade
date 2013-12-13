@@ -3,7 +3,32 @@ html
     head
         title= title || 'Ben Burwell'
         link(rel='stylesheet', href='/css/style.css')
-    body
-        block content
+        link(rel='shortcut icon', href='/favicon.ico')
+        script(src='//code.jquery.com/jquery-1.10.2.min.js', type='text/javascript')
+        script(type='text/javascript', src='//use.typekit.net/xgd2xxh.js')
+        script(type='text/javascript').
+            try{Typekit.load();}catch(e){}
+        block css
+        block javascripts
+    body(class=body_class ? body_class : undefined)
+        .main
+            if nav
+                header
+                    h1
+                        a(href="/").text Ben Burwell
+                        span.tag designer & developer
+                    ul.top_nav_bar
+                        li.projects
+                            a(href="/projects/",
+                                class=(current == 'projects')? 'current' : undefined) Projects
+                        li.writing
+                            a(href="/writing/",
+                                class=(current == 'writing')? 'current' : undefined) Writing
+                        li.github
+                            a(href="https://github.com/bburwell", target="_blank") GitHub
+                        li.resume
+                            a(href="/resume/",
+                                class=(current == 'resume')? 'current' : undefined) Résumé
+            block content
         footer
-            p Copyright &copy; Ben Burwell.
+            a(href="/colophon/") colophon

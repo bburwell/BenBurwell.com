@@ -15,6 +15,15 @@
 @cyan    :  #2aa198;
 @green   :  #859900;
 
+// Mixin to deal with cross-browser transitions
+.transition (@param, @time, @type) {
+    -webkit-transition: @param @time @type;
+    -moz-transition: @param @time @type;
+    -o-transition: @param @time @type;
+    -ms-transition: @param @time @type;
+    transition: @param @time @type;
+}
+
 // Mixin to set the background color and darken it when the element
 // is hovered over. A linear transition is also used.
 .background_darken_on_hover (@c) {
@@ -23,14 +32,28 @@
     background-color: @c;
 
     // Set up the transition
-    -webkit-transition: background-color 150ms linear;
-    -moz-transition: background-color 150ms linear;
-    -o-transition: background-color 150ms linear;
-    -ms-transition: background-color 150ms linear;
-    transition: background-color 150ms linear;
+    .transition(background-color, 0.15s, linear);
 
     // Hover background color
     &:hover {
         background-color: darken(@c, 15%);
     }
 }
+
+// Sprites
+.sprite-email{ background-position: 0 0; width: 64px; height: 64px; } 
+.sprite-email_grey{ background-position: 0 -114px; width: 64px; height: 64px; } 
+.sprite-facebook{ background-position: 0 -228px; width: 64px; height: 64px; } 
+.sprite-facebook_grey{ background-position: 0 -342px; width: 64px; height: 64px; } 
+.sprite-googleplus{ background-position: 0 -456px; width: 64px; height: 64px; } 
+.sprite-googleplus_grey{ background-position: 0 -570px; width: 64px; height: 64px; } 
+.sprite-pinterest{ background-position: 0 -684px; width: 64px; height: 64px; } 
+.sprite-pinterest_grey{ background-position: 0 -798px; width: 64px; height: 64px; } 
+.sprite-reddit{ background-position: 0 -912px; width: 64px; height: 64px; } 
+.sprite-reddit_grey{ background-position: 0 -1026px; width: 64px; height: 64px; } 
+.sprite-rss{ background-position: 0 -1140px; width: 64px; height: 64px; } 
+.sprite-rss_grey{ background-position: 0 -1254px; width: 64px; height: 64px; } 
+.sprite-stumbleupon{ background-position: 0 -1368px; width: 64px; height: 64px; } 
+.sprite-stumbleupon_grey{ background-position: 0 -1482px; width: 64px; height: 64px; } 
+.sprite-twitter{ background-position: 0 -1596px; width: 64px; height: 64px; } 
+.sprite-twitter_grey{ background-position: 0 -1710px; width: 64px; height: 64px; } 

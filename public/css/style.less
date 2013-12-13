@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Myriad Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-family: 'myriad-pro', 'Helvetica', sans-serif;
     font-size: 20px;
     font-weight: 300;
     color: @base03;
@@ -16,6 +16,7 @@ body {
 a {
     color: @red;
     text-decoration: none;
+    padding: 2px;
 
     &:hover {
         color: rgb(255, 255, 255);
@@ -24,14 +25,192 @@ a {
 }
 
 footer {
-    position: fixed;
     font-size: 0.8em;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     text-align: center;
-    background-color: #fff;
     padding: 1em;
 }
 
+.main {
+    width: 800px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+header {
+
+    h1 {
+        margin: 0;
+        position: relative;
+    }
+    
+
+    a {
+        &:hover {
+            background-color: transparent;
+            color: @base03;
+        }
+        color: @base03;
+    }
+
+    img {
+        width: 1.2em;
+        vertical-align: middle;
+    }
+
+    .tag {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: 300;
+        font-size: 1em;
+    }
+
+    ul.top_nav_bar {
+        position: relative;
+        height: 4em;
+        
+        li {
+            display: block;
+            position: absolute;
+            top: 0;
+
+            a {
+                font-size: 1em;
+                font-weight: 300;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                display: block;
+                width: 180px;
+                margin: 10px;
+                text-align: center;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                border-width: 1px;
+                border-style: solid;
+            }
+
+            a.current {
+                background-color: transparent;
+                font-weight: bold;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+        }
+
+        .projects {
+            left: 0;
+            a {
+                background-color: @green;
+                .background_darken_on_hover(@green);
+                border-color: @green;
+            }
+            a.current {
+                color: @green;
+            }
+        }
+
+        .writing {
+            left: 200px;
+            a {
+                background-color: @orange;
+                .background_darken_on_hover(@orange);
+                border-color: @orange;
+            }
+            a.current {
+                color: @orange;
+            }
+        }
+
+        .github {
+            left: 400px;
+            a {
+                background-color: @blue;
+                .background_darken_on_hover(@blue);
+                border-color: @blue;
+            }
+        }
+
+        .resume {
+            left: 600px;
+            a {
+                background-color: @magenta;
+                .background_darken_on_hover(@magenta);
+                border-color: @magenta;
+            }
+            a.current {
+                color: @magenta;
+            }
+        }
+    }
+}
+
 @import "home";
+
+.doc {
+
+    padding-bottom: 1em;
+
+    .title {
+        font-size: 2em;
+    }
+
+    .description {
+        color: @base1;
+    }
+}
+
+.project .title a {
+    color: @green;
+    &:hover {
+        background-color: @green;
+        color: #fff;
+    }
+}
+
+.writing .title a {
+    color: @orange;
+    &:hover {
+        background-color: @orange;
+        color: #fff;
+    }
+}
+
+.doc_detail {
+
+    h2 {
+        margin-bottom: 1em;
+    }
+    
+    .date {
+        color: @base1;
+        border-bottom: 1px solid @base1;
+        margin-bottom: 1em;
+        font-size: 0.8em;
+        text-transform: uppercase;
+    }
+
+    p {
+        line-height: 1.3em;
+        margin-bottom: 1.3em;
+    }
+
+    ul {
+        margin-left: 2em;
+        list-style-type: square;
+        margin-bottom: 1em;
+    }
+
+    code {
+        font-family: 'source-code-pro';
+        font-size: 0.8em;
+        color: @base01;
+    }
+
+    margin-bottom: 3em;
+
+}
+

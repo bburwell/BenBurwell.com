@@ -1,12 +1,10 @@
 @block-width: 200px;
 @block-height: 7em;
 
-.home {
+@num-social-icons: 3;
+@social-icon-dim: 64px;
 
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
+.home {
 
     h1 {
         font-size: 3em;
@@ -18,7 +16,7 @@
     }
 
     p {
-        line-height: 1.2em;
+        line-height: 1.4em;
         margin-bottom: 1em;
     }
 
@@ -35,7 +33,6 @@
             a {
                 font-size: 1.5em;
                 font-weight: bold;
-                font-family: 'Myriad Pro';
                 color: rgb(255, 255, 255);
                 text-decoration: none;
                 display: block;
@@ -75,5 +72,61 @@
                 .background_darken_on_hover(@magenta);
             }
         }
-    }   
+    }
+
+    ul.social_media_links {
+
+        width: @num-social-icons * @social-icon-dim * 1.5 - @social-icon-dim / 2;
+        height: @social-icon-dim;
+        margin-right: auto;
+        margin-left: auto;
+
+        position: relative;
+
+        li {
+            
+            position: absolute;
+            display: block;
+            top: 0;
+            width: @social-icon-dim;
+            height: @social-icon-dim;
+            background: url(/images/sprites/social.png) no-repeat top left;
+            // transition: background-position .05s linear;
+
+            a {
+                display: block;
+                width: @social-icon-dim;
+                height: @social-icon-dim;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .twitter {
+            left: 0 * (@social-icon-dim * 1.5);
+            .sprite-twitter_grey;
+            &:hover {
+                .sprite-twitter;
+            }
+        }
+
+        .gplus {
+            left: 1 * (@social-icon-dim * 1.5);
+            .sprite-googleplus_grey;
+            &:hover {
+                .sprite-googleplus;
+            }
+        }
+        
+        .facebook {
+            left: 2 * (@social-icon-dim * 1.5);
+            .sprite-facebook_grey;
+            &:hover {
+                .sprite-facebook;
+            }
+        }
+
+    } 
 }

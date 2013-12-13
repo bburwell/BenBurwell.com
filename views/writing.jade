@@ -1,0 +1,7 @@
+extends layout
+block content
+    each doc in docs
+        .writing.doc
+            .title
+                a(href=doc.link)= doc.title
+            .description= doc.description
