@@ -9,7 +9,7 @@ var marked_options = {
     smartypants: true,
     sanitize: false,
     pedantic: false
-}
+};
 
 function parseDirectory(type, callback) {
     fs.readdir('content/' + type, function (err, files) {
@@ -96,7 +96,7 @@ exports.resume = function (req, res) {
 exports.project_index = function(req, res) {
     parseDirectory('projects', function (err, docs) {
         res.render('projects', {
-            title: 'Ben Burwell‘s Projects',
+            title: 'Ben Burwell’s Projects',
             nav: true,
             current: 'projects',
             projects: docs
@@ -117,7 +117,7 @@ exports.writing = function(req, res) {
     parseDirectory('writing', function (err, docs) {
 
         res.render('writing', {
-            title: 'Ben Burwell‘s Writing',
+            title: 'Ben Burwell’s Writing',
             nav: true,
             current: 'writing',
             docs: docs
