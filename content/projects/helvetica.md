@@ -7,7 +7,7 @@ Those who believe the web should be made more beautiful will appreciate this ext
 <div class="safari_install_link">
 	<h2>Installing Helvetica in Safari</h3>
 	<ul>
-		<li><a href="//stat.benburwell.com/updates/safari/helvetica.safariextz">Download Helvetica</a> to your computer.</li>
+		<li><a href="http://updates.benburwell.com/safari/helvetica/latest.safariextz">Download Helvetica</a> to your computer.</li>
 		<li>Click on the Downloads icon in the toolbar.</li>
 		<li>Double-click on <code>helvetica.safariextz</code> to install.</li>
 	</ul>
@@ -16,7 +16,7 @@ Those who believe the web should be made more beautiful will appreciate this ext
 <div class="chrome_install_link">
 	<h2>Installing Helvetica in Google Chrome</h3>
 	<ul>
-		<li><a href="//stat.benburwell.com/updates/chrome/helvetica.crx">Download Helvetica</a> to your computer.</li>
+		<li><a href="http://updates.benburwell.com/chrome/helvetica/latest.crx">Download Helvetica</a> to your computer.</li>
 		<li>Click the <img style="vertical-align:middle;" src="/images/icons/settings-icon.png" alt="triple bar" /> icon on the Chrome toolbar</li>
 		<li>Select Tools &gt; Extensions.</li>
 		<li>Locate the extension file on your computer and drag the file onto the Extensions page.</li>
