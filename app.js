@@ -36,3 +36,10 @@ app.get('/writing/:filename', routes.writing_detail);
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listening on port ' + app.get('port'));
 });
+
+// this will prevent heroku from sleeping
+setInterval(function () {
+    http.get('http://ben-burwell-com.herokuapp.com/', function (res) {
+        console.log('Got home page');
+    });
+}, 45 * 60 * 1000);
