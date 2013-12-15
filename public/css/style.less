@@ -106,9 +106,7 @@ header {
         .projects {
             left: 0;
             a {
-                background-color: @green;
-                .background_darken_on_hover(@green);
-                border-color: @green;
+                .nav_button(@green);
             }
             a.current {
                 color: @green;
@@ -118,9 +116,7 @@ header {
         .writing {
             left: 200px;
             a {
-                background-color: @orange;
-                .background_darken_on_hover(@orange);
-                border-color: @orange;
+                .nav_button(@orange);
             }
             a.current {
                 color: @orange;
@@ -130,18 +126,14 @@ header {
         .github {
             left: 400px;
             a {
-                background-color: @blue;
-                .background_darken_on_hover(@blue);
-                border-color: @blue;
+                .nav_button(@blue);
             }
         }
 
         .resume {
             left: 600px;
             a {
-                background-color: @magenta;
-                .background_darken_on_hover(@magenta);
-                border-color: @magenta;
+                .nav_button(@magenta);
             }
             a.current {
                 color: @magenta;
@@ -185,6 +177,12 @@ header {
 
     h2 {
         margin-bottom: 1em;
+    }
+
+    .twitter-share-button {
+        float: right;
+        display: block;
+        margin-top: 10px;
     }
     
     .date {

@@ -24,19 +24,13 @@
     transition: @param @time @type;
 }
 
-// Mixin to set the background color and darken it when the element
-// is hovered over. A linear transition is also used.
-.background_darken_on_hover (@c) {
-
-    // Set the background color
+.nav_button(@c) {
     background-color: @c;
-
-    // Set up the transition
-    .transition(background-color, 0.15s, linear);
-
-    // Hover background color
+    border-color: @c;
+    .transition(all, 0.15s, linear);
     &:hover {
         background-color: darken(@c, 15%);
+        border-color: darken(@c, 15%);
     }
 }
 
