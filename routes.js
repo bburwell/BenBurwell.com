@@ -17,6 +17,7 @@ function parseDirectory(type, callback) {
         if (err) {
 
             callback({error: 'Unable to read from directory'}, null);
+            return;
 
         } else {
 
@@ -53,8 +54,9 @@ function parseFile(type, filename, callback) {
 
     fs.readFile('content/' + type + '/' + filename, 'utf8', function (err, data) {
 
-        if (err) {
+        if (err || !data) {
             callback({error:'could not read file'}, null);
+            return;
         }
 
         var lines = data.split("\n");
@@ -131,6 +133,11 @@ exports.writing_detail = function(req, res) {
     var file = req.params.filename + '.md';
     var type = 'writing';
     parseFile(type, file, function (err, doc) {
+
+        if (err || !doc) {
+            return res.render('error', {nav: true});
+        }
+
         marked(doc.content, marked_options, function (err, content) {
             res.render('writing_detail', {
                 title: doc.title,
@@ -148,6 +155,11 @@ exports.project_detail = function(req, res) {
     var file = req.params.filename + '.md';
     var type = 'projects';
     parseFile(type, file, function (err, doc) {
+        
+        if (err || !doc) {
+            return res.render('error', {nav: true});
+        }
+
         marked(doc.content, marked_options, function (err, content) {
             res.render('project_detail', {
                 title: doc.title,

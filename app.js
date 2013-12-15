@@ -23,6 +23,9 @@ app.use(require('less-middleware')({
 }));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(function (req, res) {
+    res.render('error', {nav: true});
+});
 
 app.get('/', routes.index);
 app.get('/projects', routes.project_index);
