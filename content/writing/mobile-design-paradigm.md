@@ -1,4 +1,4 @@
-Title: Chainging Mobile UI Design Paradigm
+Title: Changing Mobile UI Design Paradigm
 Description: When iOS was first introduced, it was filled with beautiful, glossy icons with shadowing and reflections. However, there’s been a shift in the UI design as the operating system has matured.
 Date: 12 December 2012
 
