@@ -4,6 +4,12 @@ Date: 13 January 2013
 
 
 
+### _Every Good Boy Deserves Favor_ (Spring 2014)
+
+Lighting Designer — dir. Benjamin Wald
+
+
+
 ### _The Problem_ (Spring 2013)
 
 Lighting Designer — dir. Meghan Sullivan
