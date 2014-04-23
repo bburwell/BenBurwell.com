@@ -92,15 +92,6 @@ header {
                 border-width: 1px;
                 border-style: solid;
             }
-
-            a.current {
-                background-color: transparent;
-                font-weight: bold;
-                &:hover {
-                    background-color: transparent;
-                }
-            }
-
         }
 
         .projects {
@@ -108,18 +99,12 @@ header {
             a {
                 .nav_button(@green);
             }
-            a.current {
-                color: @green;
-            }
         }
 
         .writing {
             left: 200px;
             a {
                 .nav_button(@orange);
-            }
-            a.current {
-                color: @orange;
             }
         }
 
@@ -134,9 +119,6 @@ header {
             left: 600px;
             a {
                 .nav_button(@magenta);
-            }
-            a.current {
-                color: @magenta;
             }
         }
     }
