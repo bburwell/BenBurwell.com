@@ -2,6 +2,6 @@ extends layout
 block content
     each doc in docs
         .writing.doc
-            .title
+            h1
                 a(href=doc.link)= doc.title
             .description= doc.description

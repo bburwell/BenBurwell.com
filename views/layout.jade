@@ -2,6 +2,7 @@ doctype 5
 html
     head
         title= title || 'Ben Burwell'
+        link(rel='stylesheet', href='/css/960_12_col.css')
         link(rel='stylesheet', href='/css/style.css')
         link(rel='shortcut icon', href='/images/icons/favicon.ico', sizes="128x128")
         link(rel='apple-touch-icon', href='/images/icons/apple/apple-touch-icon-57x57.png', sizes='57x57')
@@ -21,25 +22,31 @@ html
         block css
         block javascripts
     body(class=body_class ? body_class : undefined)
-        .main
-            if nav
-                header
-                    h1
-                        a(href='/').text Ben Burwell
-                        span.tag designer &amp; developer
-                    ul.top_nav_bar
-                        li.projects
+        .container_12
+            header
+                .top_nav_bar
+                    .grid_3
+                        .projects
                             a(href='/projects/',
                                 class=(current == 'projects')? 'current' : undefined) Projects
-                        li.writing
+                    .grid_3
+                        .writing
                             a(href='/writing/',
                                 class=(current == 'writing')? 'current' : undefined) Writing
-                        li.github
+                    .grid_3
+                        .github
                             a(href='https://github.com/benburwell', target='_blank') GitHub
-                        li.resume
+                    .grid_3
+                        .resume
                             a(href='/resume/',
                                 class=(current == 'resume')? 'current' : undefined) Résumé
-            block content
-        footer
-            p
-                a(href='/colophon/') colophon
+            .grid_12
+                block content
+            .grid_12
+                footer
+                    p
+                        a(href='/') about
+                        |  &bull; 
+                        a(href='https://twitter.com/bburwell') @bburwell
+                        |  &bull; 
+                        a(href='mailto:hi@benburwell.com') email

@@ -7,10 +7,15 @@
 }
 
 body {
-    font-family: 'myriad-pro', 'Helvetica', sans-serif;
+    font-family: 'minion-pro', serif;
     font-size: 20px;
-    font-weight: 300;
     color: @base03;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'myriad-pro', sans-serif;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 a {
@@ -19,32 +24,27 @@ a {
     padding: 2px;
 
     &:hover {
-        color: rgb(255, 255, 255);
-        background-color: @red;
+        color: darken(@red, 15%);
+        .transition(color, 0.15s, linear);
     }
 }
 
 footer {
-    font-size: 0.8em;
+    font-family: 'myriad-pro', sans-serif;
     text-align: center;
     padding: 1em;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
-.main {
-    width: 800px;
+.container_12 {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
 }
 
 header {
-
-    h1 {
-        margin: 0;
-        position: relative;
-    }
-    
 
     a {
         &:hover {
@@ -54,44 +54,19 @@ header {
         color: @base03;
     }
 
-    img {
-        width: 1.2em;
-        vertical-align: middle;
-    }
+    .top_nav_bar {
 
-    .tag {
-        position: absolute;
-        right: 0;
-        top: 0;
-        font-weight: 300;
-        font-size: 1em;
-        width: 500px;
-        text-align: right;
-    }
+        font-family: 'myriad-pro', sans-serif;
 
-    ul.top_nav_bar {
-        position: relative;
-        height: 4em;
-        
-        li {
+        a {
+            font-size: 1em;
+            font-weight: 300;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
             display: block;
-            position: absolute;
-            top: 0;
-
-            a {
-                font-size: 1em;
-                font-weight: 300;
-                color: rgb(255, 255, 255);
-                text-decoration: none;
-                display: block;
-                width: 180px;
-                margin: 10px;
-                text-align: center;
-                padding-top: 0.5em;
-                padding-bottom: 0.5em;
-                border-width: 1px;
-                border-style: solid;
-            }
+            text-align: center;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
         }
 
         .projects {
@@ -124,7 +99,15 @@ header {
     }
 }
 
-@import "home";
+.home {
+    text-align: center;
+}
+
+.about {
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .doc {
 
@@ -134,32 +117,23 @@ header {
         font-size: 2em;
     }
 
-    .description {
-        color: @base1;
-    }
 }
 
-.project .title a {
+.project h1 a {
     color: @green;
     &:hover {
-        background-color: @green;
-        color: #fff;
+        color: darken(@green, 15%);
     }
 }
 
-.writing .title a {
+.writing h1 a {
     color: @orange;
     &:hover {
-        background-color: @orange;
-        color: #fff;
+        color: darken(@orange, 15%);
     }
 }
 
 .doc_detail {
-
-    h2 {
-        margin-bottom: 1em;
-    }
 
     .twitter-share-button {
         float: right;
@@ -195,8 +169,5 @@ header {
         border-radius: 2px;
         padding: 0 3px;
     }
-
-    margin-bottom: 3em;
-
 }
 
