@@ -17,12 +17,13 @@ app.set('view engine', 'jade');
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+app.use(express.compress());
 app.use(require('less-middleware')({
     src: __dirname + '/public',
     yuicompress: true
 }));
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')), { maxAge: 86400000 });
 app.use(function (req, res) {
     res.render('error', {nav: true});
 });
