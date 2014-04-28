@@ -1,4 +1,4 @@
-Title: Quick App Launcher for Mac OS
+Title: Quick App Launcher for OS X
 Description: How to remap your keyboard to quickly launch applications.
 Date: 23 April 2014
 
