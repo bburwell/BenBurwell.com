@@ -86,8 +86,7 @@ function parseFile(type, filename, callback) {
 
 exports.index = function (req, res) {
     res.render('home', {
-        title: 'Ben Burwell',
-        body_class: 'home'
+        title: 'Ben Burwell'
     });
 };
 
@@ -99,19 +98,9 @@ exports.project_index = function(req, res) {
     parseDirectory('projects', function (err, docs) {
         res.render('projects', {
             title: 'Ben Burwell’s Projects',
-            nav: true,
-            current: 'projects',
             projects: docs
         });
 
-    });
-};
-
-exports.colophon = function(req, res) {
-    res.render('colophon', {
-        title: 'Colophon — Ben Burwell',
-        nav: true,
-        current: null
     });
 };
 
@@ -120,8 +109,6 @@ exports.writing = function(req, res) {
 
         res.render('writing', {
             title: 'Ben Burwell’s Writing',
-            nav: true,
-            current: 'writing',
             docs: docs
         });
 
@@ -141,8 +128,6 @@ exports.writing_detail = function(req, res) {
         marked(doc.content, marked_options, function (err, content) {
             res.render('writing_detail', {
                 title: doc.title,
-                nav: true,
-                current: 'writing',
                 content: content,
                 date: doc.date
             });
@@ -163,8 +148,6 @@ exports.project_detail = function(req, res) {
         marked(doc.content, marked_options, function (err, content) {
             res.render('project_detail', {
                 title: doc.title,
-                nav: true,
-                current: 'projects',
                 content: content
             });
         });

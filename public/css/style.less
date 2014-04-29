@@ -1,5 +1,6 @@
 @import "normalize";
 @import "global";
+@import "960_12_col";
 
 * {
     padding: 0;
@@ -8,12 +9,13 @@
 
 body {
     font-family: 'minion-pro', serif;
-    font-size: 20px;
+    font-size: 22px;
     color: @base03;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'myriad-pro', sans-serif;
+    font-weight: 600;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -21,102 +23,60 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: @red;
     text-decoration: none;
-    padding: 2px;
+    .transition(color, 0.25s, linear);
 
     &:hover {
         color: darken(@red, 15%);
-        .transition(color, 0.15s, linear);
     }
 }
 
 footer {
     font-family: 'myriad-pro', sans-serif;
     text-align: center;
-    padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
     font-variant: small-caps;
     letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.container_12 {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    font-weight: 600;
 }
 
 header {
 
+    font-family: 'myriad-pro', sans-serif;
+
     a {
+        font-size: 1em;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        display: block;
+        text-align: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+
         &:hover {
-            background-color: transparent;
-            color: @base03;
-        }
-        color: @base03;
-    }
-
-    .top_nav_bar {
-
-        font-family: 'myriad-pro', sans-serif;
-
-        a {
-            font-size: 1em;
-            font-weight: 300;
             color: rgb(255, 255, 255);
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            padding-top: 0.5em;
-            padding-bottom: 0.5em;
-        }
-
-        .projects {
-            left: 0;
-            a {
-                .nav_button(@green);
-            }
-        }
-
-        .writing {
-            left: 200px;
-            a {
-                .nav_button(@orange);
-            }
-        }
-
-        .github {
-            left: 400px;
-            a {
-                .nav_button(@blue);
-            }
-        }
-
-        .resume {
-            left: 600px;
-            a {
-                .nav_button(@magenta);
-            }
         }
     }
-}
 
-.home {
-    text-align: center;
+    .projects a {
+        .nav_button(@green);
+    }
+
+    .writing a {
+        .nav_button(@orange);
+    }
+
+    .github a {
+        .nav_button(@blue);
+    }
+
+    .resume a {
+        .nav_button(@magenta);
+    }
 }
 
 .about {
-    width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.doc {
-
-    padding-bottom: 1em;
-
-    .title {
-        font-size: 2em;
-    }
-
+    text-align: center;
 }
 
 .project h1 a {
@@ -134,24 +94,15 @@ header {
 }
 
 .doc_detail {
-
-    .twitter-share-button {
-        float: right;
-        display: block;
-        margin-top: 10px;
-    }
     
     .date {
         color: @base1;
-        border-bottom: 1px solid @base1;
         margin-bottom: 1em;
-        font-size: 0.8em;
-        text-transform: uppercase;
     }
 
     p {
-        line-height: 1.3em;
-        margin-bottom: 1.3em;
+        line-height: 1.5em;
+        margin-bottom: 1.5em;
     }
 
     ul {
@@ -169,5 +120,9 @@ header {
         border-radius: 2px;
         padding: 0 3px;
     }
+}
+
+@media (max-width: 500px) {
+
 }
 

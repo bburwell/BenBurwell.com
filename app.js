@@ -31,7 +31,6 @@ app.use(function (req, res) {
 app.get('/', routes.index);
 app.get('/projects', routes.project_index);
 app.get('/writing', routes.writing);
-app.get('/colophon', routes.colophon);
 app.get('/resume', routes.resume);
 
 app.get('/projects/:filename', routes.project_detail);

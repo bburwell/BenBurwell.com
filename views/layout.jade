@@ -2,7 +2,6 @@ doctype 5
 html
     head
         title= title || 'Ben Burwell'
-        link(rel='stylesheet', href='/css/960_12_col.css')
         link(rel='stylesheet', href='/css/style.css')
         link(rel='shortcut icon', href='/images/icons/favicon.ico', sizes="128x128")
         link(rel='apple-touch-icon', href='/images/icons/apple/apple-touch-icon-57x57.png', sizes='57x57')
@@ -13,7 +12,7 @@ html
         link(rel='apple-touch-icon', href='/images/icons/apple/apple-touch-icon-144x144.png', sizes='144x144')
         link(rel='apple-touch-icon', href='/images/icons/apple/apple-touch-icon-152x152.png', sizes='152x152')
         meta(name='author', content='Ben Burwell')
-        meta(name='description', content='Designer and developer. Thoughts on design, security, information, &amp; more')
+        meta(name='description', content='Computer science student, hacker. Passionate about kerning & coffee.')
         meta(name='keywords', content='ben burwell, designer, freelance, developer, programming')
         script(async, src='//code.jquery.com/jquery-1.10.2.min.js', type='text/javascript')
         script(type='text/javascript', src='//use.typekit.net/xgd2xxh.js')
@@ -23,27 +22,22 @@ html
         block javascripts
     body(class=body_class ? body_class : undefined)
         .container_12
-            header
-                .top_nav_bar
+            header.top_nav_bar
                     .grid_3
                         .projects
-                            a(href='/projects/',
-                                class=(current == 'projects')? 'current' : undefined) Projects
+                            a(href='/projects/') Projects
                     .grid_3
                         .writing
-                            a(href='/writing/',
-                                class=(current == 'writing')? 'current' : undefined) Writing
+                            a(href='/writing/') Writing
                     .grid_3
                         .github
                             a(href='https://github.com/benburwell', target='_blank') GitHub
                     .grid_3
                         .resume
-                            a(href='/resume/',
-                                class=(current == 'resume')? 'current' : undefined) Résumé
-            .grid_12
+                            a(href='/resume/') Résumé
+            main.grid_12
                 block content
-            .grid_12
-                footer
+            footer.grid_12
                     p
                         a(href='/') about
                         |  &bull; 
