@@ -1,7 +1,7 @@
 doctype 5
 html
     head
-        title= title || 'Ben Burwell'
+        title= title || 'Ben Burwell - Designer and Developer'
         link(rel='stylesheet', href='/css/style.css')
         link(rel='shortcut icon', href='/images/icons/favicon.ico', sizes="128x128")
         link(rel='apple-touch-icon', href='/images/icons/apple/apple-touch-icon-57x57.png', sizes='57x57')
@@ -40,23 +40,19 @@ html
         .container_12
             header.top_nav_bar
                     .grid_3
-                        .projects
-                            a(href='/projects/') Projects
+                        a.projects(href='/projects/') Projects
                     .grid_3
-                        .writing
-                            a(href='/writing/') Writing
+                        a.writing(href='/writing/') Writing
                     .grid_3
-                        .github
-                            a(href='https://github.com/benburwell', target='_blank') GitHub
+                        a.github(href='https://github.com/benburwell', target='_blank') GitHub
                     .grid_3
-                        .resume
-                            a(href='/resume/') Résumé
+                        a.resume(href='/resume/') Résumé
             main.grid_12
                 block content
             footer.grid_12
                     p
-                        a(href='/') about
-                        |  &bull; 
-                        a(href='https://twitter.com/bburwell') twitter
-                        |  &bull; 
-                        a(href='mailto:hi@benburwell.com') email
+                        a(href='/') Ben
+                        |  / 
+                        a(href='https://twitter.com/bburwell') Twitter
+                        |  / 
+                        a(href='mailto:hi@benburwell.com') Email
