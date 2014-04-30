@@ -15,9 +15,25 @@ html
         meta(name='description', content='Computer science student, hacker. Passionate about kerning & coffee.')
         meta(name='keywords', content='ben burwell, designer, freelance, developer, programming')
         meta(name='viewport', content='width="device-width",initial-scale=1,user-scalable=no')
-        script(type='text/javascript', src='//use.typekit.net/xgd2xxh.js')
         script(type='text/javascript').
-            try{Typekit.load();}catch(e){}
+            (function() {
+                var config = {
+                    kitId: 'xgd2xxh'
+                };
+                var d = false;
+                var tk = document.createElement('script');
+                tk.src = '//use.typekit.net/' + config.kitId + '.js';
+                tk.type = 'text/javascript';
+                tk.async = 'true';
+                tk.onload = tk.onreadystatechange = function() {
+                    var rs = this.readyState;
+                    if (d || rs && rs != 'complete' && rs != 'loaded') return;
+                    d = true;
+                    try { Typekit.load(config); } catch (e) {}
+                };
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(tk, s);
+            })();
         block css
         block javascripts
     body(class=body_class ? body_class : undefined)
